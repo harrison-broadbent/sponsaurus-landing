@@ -1,23 +1,65 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="bg-white">
-  <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 border-b-8 border-yellow-400">
+<div
+  class="
+    bg-gray-50
+    rounded-3xl
+    filter
+    drop-shadow-lg
+    shadow-lg
+    mx-auto
+    w-11/12
+    pb-12
+  "
+>
+  <div
+    class="
+      max-w-7xl
+      mx-auto
+      py-16
+      px-4
+      sm:py-24 sm:px-6
+      lg:px-8
+      border-b-8 border-yellow-400
+    "
+  >
     <div class="text-center">
-      <h2 class="text-base font-semibold text-indigo-600 tracking-wide uppercase">
-				Live Demo
-			</h2>
-      <p class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-				Give it a spin.
-			</p>
+      <h2
+        class="text-base font-semibold text-indigo-600 tracking-wide uppercase"
+      >
+        Live Demo
+      </h2>
+      <p
+        class="
+          mt-1
+          text-4xl
+          font-extrabold
+          text-gray-900
+          sm:text-5xl sm:tracking-tight
+          lg:text-6xl
+        "
+      >
+        <%= data.landing.demoText %>
+      </p>
       <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-				Try out a live Sponsaurus page, embedded using the native widget. Embed into websites, Notion pages, and more.
-			</p>
+        <%= data.landing.demoCaptionText %>
+      </p>
     </div>
   </div>
 
-	<iframe 
-		class="appearance-none filter drop-shadow-lg w-full sm:w-4/5 mx-auto border-none overflow-hidden py-6 sm:px-6"
-		style="height: 600px;" 
-		src="https://app.sponsaurus.com/wells-weekly/embed">
-	</iframe>
-
+  <iframe
+    class="
+      appearance-none
+      filter
+      drop-shadow-lg
+      w-full
+      sm:w-4/5
+      mx-auto
+      border-none
+      overflow-hidden
+      my-6
+    "
+    style="height: 600px"
+    src="https://app.sponsaurus.com/wells-weekly/embed"
+  >
+  </iframe>
 </div>

@@ -1,3 +1,14 @@
+# Blog
+activate :blog do |blog|
+  blog.prefix = "blog"
+  # blog.permalink = ":title.html"
+  # blog.sources = "{title}.md"
+end
+
+# Pretty routes
+activate :directory_indexes
+
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -54,3 +65,7 @@ configure :build do
 
   ignore 'stylesheets/components/*.css'
 end
+
+
+# development 
+activate :livereload

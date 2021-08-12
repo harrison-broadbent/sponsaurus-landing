@@ -7,12 +7,16 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Sponsaurus <%= " | " + current_page.data.title %></title>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="https://unpkg.com/vue@next"></script>
     <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
   </head>
   <body>
     <%= partial 'partials/_header.html.erb' %>
     <%= yield %>
     <%= partial 'partials/_footer.html.erb' %>
+
+    
+    <%= javascript_include_tag "site" %>
   </body>
 </html>

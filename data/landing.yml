@@ -1,0 +1,28 @@
+---
+# Hero
+whatsNewText: "It's alive!"
+heroText: "Booking software for newsletter creators"
+heroCaptionText: "Easily book and manage advertising space in your newsletters."
+
+# Demo
+demoText: "Give it a spin."
+demoCaptionText: "Try out a live Sponsaurus page, embedded using the native widget. Embed into websites, Notion pages, and more. "
+
+# Features
+featuresText: "A better way to book your advertising space."
+featuresCaptionText: "Sponsaurus makes it super easy to create and manage your advertising slots."
+feature1Name: "Multiple Advertising Categories"
+feature1Description: "Easily add different types of advertising slots, so you can book out your classified, image ads and shoutouts."
+feature2Name: "Embed widget"
+feature2Description: "You can natively embed your advertising page into your website or a Notion board."
+feature3Name: "Email Templates"
+feature3Description: "Sponsaurus pre-populates emails with a customizable message from you. Stop the back-and-forth, and get the information you need straight away."
+feature4Name: "Automatic slot management"
+feature4Description: "Sponsaurus will automatically hide advertising slots that did not get filled in time, so you can focus on your next issue. "
+
+# Email form
+emailText: "Let's keep in touch."
+emailCaptionText: "Sponsaurus is still in (very!) active development. Subscribe for email updates below to be one of the first to hear about new features and releases."
+
+---
+
