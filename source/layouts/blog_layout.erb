@@ -10,8 +10,21 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Sponsaurus <%= " | " + current_page.data.title %></title>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <script src="https://unpkg.com/vue@next"></script>
+    <%# <script src="https://unpkg.com/vue@next"></script> %>
+    <script src="https://unpkg.com/vue@3.2.2/dist/vue.global.prod.js"></script>
+    <%= favicon_tag 'favicon.ico' %>
     <%= stylesheet_link_tag "site" %>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4B9T2CW5G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-V4B9T2CW5G');
+    </script>
+
   </head>
   <body>
     <%= partial 'partials/_header.html.erb' %>
@@ -49,6 +62,7 @@
       </div>
     </div>
 
+    <%= partial 'partials/landing/_newsletter.html.erb' %>
     <%= partial 'partials/_footer.html.erb' %> <%= javascript_include_tag "site"
     %>
   </body>
