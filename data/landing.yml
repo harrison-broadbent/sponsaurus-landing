@@ -3,6 +3,7 @@
 whatsNewText: "It's alive!"
 heroText: "Booking software for newsletter creators"
 heroCaptionText: "Easily book and manage advertising space in your newsletters."
+heroButtonText: "Join the waitlist"
 
 # Demo
 demoText: "Give it a spin."
@@ -22,7 +23,7 @@ feature4Description: "Sponsaurus will automatically hide advertising slots that 
 
 # Email form
 emailText: "Let's keep in touch."
-emailCaptionText: "Sponsaurus is still in (very!) active development. Subscribe for email updates below to be one of the first to hear about new features and releases."
-
+emailCaptionText: "Sponsaurus is still in (very!) active development. Subscribe for updates to hear about new features and progress updates. Come along for the journey!"
+emailButtonText: "I want updates"
 ---
 

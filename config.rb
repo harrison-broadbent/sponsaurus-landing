@@ -5,7 +5,7 @@ activate :blog do |blog|
   blog.sources = "{title}.html"
   blog.layout = "blog_layout"
   blog.new_article_template = File.expand_path("./source/partials/blog/_post_template.erb")
-  
+  blog.summary_length = 100
 end
 
 # Pretty routes
@@ -73,7 +73,7 @@ helpers do
         <a href='#{author[:url]}' class='hover:underline'> #{author[:name]} </a>
       </p>
       <div class='flex space-x-1 text-sm text-gray-500'>
-        <time>#{article.date}</time>
+        <time>#{article.date.strftime('%b %e, %Y')}</time>
         <span>
           #{(article.body.length / 200.0).ceil} min read
         </span>

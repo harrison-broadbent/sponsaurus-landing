@@ -75,12 +75,17 @@
               <%= data.landing.heroCaptionText %>
             </p>
           </div>
-          <form action="#" class="mt-12 sm:max-w-lg sm:w-full sm:flex">
+          <form
+            action="https://formspree.io/f/xjvjpgwg"
+            method="POST"
+            class="mt-12 sm:max-w-lg sm:w-full sm:flex"
+          >
             <div class="min-w-0 flex-1">
               <label for="hero-email" class="sr-only">Email address</label>
               <input
                 id="hero-email"
                 type="email"
+                name="email"
                 class="
                   block
                   w-full
@@ -93,7 +98,8 @@
                   shadow-sm
                   focus:border-indigo-500 focus:ring-indigo-500
                 "
-                placeholder="Join the waitlist"
+                placeholder="Email address"
+                required
               />
             </div>
             <div class="mt-4 sm:mt-0 sm:ml-3">
@@ -119,7 +125,7 @@
                   sm:px-10
                 "
               >
-                Can't wait!
+                <%= data.landing.heroButtonText %>
               </button>
             </div>
           </form>
