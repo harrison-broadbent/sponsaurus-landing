@@ -13,15 +13,10 @@
     <%= favicon_tag 'favicon.ico' %>
     <%= stylesheet_link_tag "site" %>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4B9T2CW5G"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-V4B9T2CW5G');
-    </script>
+    <%# only include tag in production %>
+    <% if app.build? %>
+      <%= partial 'partials/tracking_snippet' %>
+    <% end %>
 
   </head>
 
