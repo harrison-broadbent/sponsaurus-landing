@@ -8,9 +8,18 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Sponsaurus <%= " | " + current_page.data.title %></title>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <script src="https://unpkg.com/vue@next"></script>
+    <%# <script src="https://unpkg.com/vue@next"></script> %>
+    <script src="https://unpkg.com/vue@3.2.2/dist/vue.global.prod.js"></script>
+    <%= favicon_tag 'favicon.ico' %>
     <%= stylesheet_link_tag "site" %>
+
+    <%# only include tag in production %>
+    <% if app.build? %>
+      <%= partial 'partials/tracking_snippet' %>
+    <% end %>
+
   </head>
+
   <body>
     <%= partial 'partials/_header.html.erb' %>
     <%= yield %>
@@ -19,4 +28,5 @@
     
     <%= javascript_include_tag "site" %>
   </body>
+
 </html>
