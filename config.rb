@@ -1,8 +1,11 @@
 # Blog
 activate :blog do |blog|
   blog.prefix = "blog"
-  # blog.permalink = ":title.html"
-  # blog.sources = "{title}.md"
+  blog.permalink = "{title}.html"
+  blog.sources = "{title}.html"
+  blog.layout = "blog_layout"
+  blog.new_article_template = File.expand_path("./source/partials/blog/_post_template.erb")
+  
 end
 
 # Pretty routes
@@ -35,11 +38,52 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+helpers do
+
+  def resolve_author_data(author_name)
+    authors = {
+      harrison: {
+        name: "Harrison Broadbent", 
+        image: "images/authors/harrison.jpg",
+        url: "/about"
+      }
+    }
+
+    return authors[author_name.to_sym]
+  end
+
+
+  def blog_card_bottom_helper(article)
+
+    author = resolve_author_data(article.data.author)
+
+    return "
+    <div class='mt-6 flex items-center'>
+    <div class='flex-shrink-0'>
+      <a href='#{author[:url]}'>
+        <span class='sr-only'>#{author[:name]}</span>
+        <img
+          class='h-10 w-10 rounded-full'
+          src='#{author[:image]}'
+        />
+      </a>
+    </div>
+    <div class='ml-3'>
+      <p class='text-sm font-medium text-gray-900'>
+        <a href='#{author[:url]}' class='hover:underline'> #{author[:name]} </a>
+      </p>
+      <div class='flex space-x-1 text-sm text-gray-500'>
+        <time>#{article.date}</time>
+        <span>
+          #{(article.body.length / 200.0).ceil} min read
+        </span>
+      </div>
+    </div>
+  </div>
+  "
+
+  end
+end
 
 # Development-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings

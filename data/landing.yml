@@ -18,7 +18,7 @@ feature2Description: "You can natively embed your advertising page into your web
 feature3Name: "Email Templates"
 feature3Description: "Sponsaurus pre-populates emails with a customizable message from you. Stop the back-and-forth, and get the information you need straight away."
 feature4Name: "Automatic slot management"
-feature4Description: "Sponsaurus will automatically hide advertising slots that did not get filled in time, so you can focus on your next issue. "
+feature4Description: "Sponsaurus will automatically hide advertising slots that do not get filled in time, so you don't have to worry about managing availability. "
 
 # Email form
 emailText: "Let's keep in touch."
