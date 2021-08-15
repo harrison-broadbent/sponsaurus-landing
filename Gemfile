@@ -16,7 +16,7 @@ gem 'middleman-livereload'
 
 
 # Production Gems
-gem "middleman-sitemap"
+gem "middleman-sitemap", :git => "https://github.com/matsu911/middleman-sitemap" 
 gem 'middleman-robots'
 gem 'middleman-minify-html'
 gem 'middleman-autoprefixer'
