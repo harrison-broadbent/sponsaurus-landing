@@ -123,8 +123,8 @@ configure :build do
   
   ignore 'stylesheets/components/*.css'
 
-  # minify everything (after tailwind has built css)
+  # minify just html and js (css causes issues)
   activate :minify_html
-  activate :minify_css
+  # activate :minify_css
   activate :minify_javascript
 end
