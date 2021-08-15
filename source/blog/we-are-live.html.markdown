@@ -3,7 +3,7 @@ title: We are live!
 slug: we-are-live
 date: Aug 14 2021
 author: harrison
-image: https://images.unsplash.com/photo-1534175262708-ebf71ac916c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80
+thumbnail: https://images.unsplash.com/photo-1534175262708-ebf71ac916c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80
 ---
 
 I'm very exited to launch the new marketing site for Sponsaurus!
