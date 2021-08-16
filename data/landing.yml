@@ -7,17 +7,17 @@ heroButtonText: "Join the waitlist"
 
 # Demo
 demoText: "Give it a spin."
-demoCaptionText: "Try out a live Sponsaurus page, embedded using the native widget. Embed into websites, Notion pages, and more. "
+demoCaptionText: "Embed natively into websites, Notion boards and more."
 
 # Features
 featuresText: "A better way to book your advertising space."
-featuresCaptionText: "Sponsaurus makes it super easy to create and manage your advertising slots."
-feature1Name: "Multiple Advertising Categories"
-feature1Description: "Easily add different types of advertising slots, so you can book out your classified, image ads and shoutouts."
-feature2Name: "Embed widget"
-feature2Description: "You can natively embed your advertising page into your website or a Notion board."
+featuresCaptionText: "Sponsaurus makes it easy to create and manage bookable advertising space in your newsletter."
+feature1Name: "Native embed widget"
+feature1Description: "You can easily embed your Sponsaurus page into your website or a Notion board, using the native embeddable widget."
+feature2Name: "Multiple Advertising Categories"
+feature2Description: "Sponsaurus makes it easy to add different types of advertising slots. Whether you run classifieds, image ads, shoutouts, or something else entirely — we've got you covered."
 feature3Name: "Email Templates"
-feature3Description: "Sponsaurus pre-populates emails with a customizable message from you. Stop the back-and-forth, and get the information you need straight away."
+feature3Description: "Sponsaurus pre-populates emails with a customizable message from you, to help eliminate the back-and-forth, and ensure you get the information you need."
 feature4Name: "Automatic slot management"
 feature4Description: "Sponsaurus will automatically hide advertising slots that do not get filled in time, so you don't have to worry about managing availability. "
 

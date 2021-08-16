@@ -19,6 +19,10 @@ module.exports = {
       fontFamily: {
         sans: ["Inter var"],
       },
+      animation: {
+        "pulse-slow": "pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "spin-slow": "spin 3s linear infinite",
+      },
     },
   },
   variants: {
