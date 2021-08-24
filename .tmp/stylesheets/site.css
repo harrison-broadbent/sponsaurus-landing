@@ -11458,6 +11458,18 @@ select {
   }
 }
 
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .animate-none {
   -webkit-animation: none;
           animation: none;
@@ -11481,6 +11493,16 @@ select {
 .animate-bounce {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
+}
+
+.animate-pulse-slow {
+  -webkit-animation: pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin-slow {
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
 }
 
 .cursor-auto {
@@ -44223,6 +44245,16 @@ body {
             animation: bounce 1s infinite;
   }
 
+  .sm\:animate-pulse-slow {
+    -webkit-animation: pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .sm\:animate-spin-slow {
+    -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
+  }
+
   .sm\:cursor-auto {
     cursor: auto;
   }
@@ -76943,6 +76975,16 @@ body {
   .md\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .md\:animate-pulse-slow {
+    -webkit-animation: pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .md\:animate-spin-slow {
+    -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
   }
 
   .md\:cursor-auto {
@@ -109667,6 +109709,16 @@ body {
             animation: bounce 1s infinite;
   }
 
+  .lg\:animate-pulse-slow {
+    -webkit-animation: pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .lg\:animate-spin-slow {
+    -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
+  }
+
   .lg\:cursor-auto {
     cursor: auto;
   }
@@ -142389,6 +142441,16 @@ body {
             animation: bounce 1s infinite;
   }
 
+  .xl\:animate-pulse-slow {
+    -webkit-animation: pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .xl\:animate-spin-slow {
+    -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
+  }
+
   .xl\:cursor-auto {
     cursor: auto;
   }
@@ -175109,6 +175171,16 @@ body {
   .\32xl\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .\32xl\:animate-pulse-slow {
+    -webkit-animation: pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .\32xl\:animate-spin-slow {
+    -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
   }
 
   .\32xl\:cursor-auto {

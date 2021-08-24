@@ -8,35 +8,13 @@ activate :blog do |blog|
   blog.summary_length = 100
 end
 
-# Pretty routes
-activate :directory_indexes
-
-
-# Layouts
-# https://middlemanapp.com/basics/layouts/
-
 # Per-page layout changes
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
-
-# Proxy pages
-# https://middlemanapp.com/advanced/dynamic-pages/
-
-# proxy(
-#   '/this-page-has-no-template.html',
-#   '/template-file.html',
-#   locals: {
-#     which_fake_page: 'Rendering a fake page with a local variable'
-#   },
-# )
 
 # Helpers
-# Methods defined in the helpers block are available in templates
-# https://middlemanapp.com/basics/helper-methods/
 
 helpers do
 
@@ -83,12 +61,40 @@ helpers do
   "
 
   end
+
+  def generate_meta_tags(current_page)
+    return "
+    <meta name='title' content='Sponsaurus | #{current_page.data.title || data.site.title}'>
+    <meta name='description' content='#{current_page.data.description || data.site.description}'>
+
+    <!-- Open Graph / Facebook -->
+    <meta property='og:type' content='website'>
+    <meta property='og:url' content='#{current_page.url}'>
+    <meta property='og:title' content='#{current_page.data.title || data.site.title}'>
+    <meta property='og:description' content='#{current_page.data.description || data.site.description}'>
+    <meta property='og:image' content='#{current_page.data.thumbnail || '/images/logo_square.png'}'>
+
+    <!-- Twitter -->
+    <meta property='twitter:card' content='summary_large_image'>
+    <meta property='twitter:url' content='#{current_page.url}'>
+    <meta property='twitter:title' content='#{current_page.data.title || data.site.title}'>
+    <meta property='twitter:description' content='#{current_page.data.description || data.site.description}'>
+    <meta property='twitter:image' content='#{current_page.data.thumbnail || '/images/logo_square.png'}'>
+
+    "
+  end
+
 end
+
+# Standard plugins
+activate :directory_indexes
+activate :autoprefixer
 
 # Development-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 configure :development do
+  activate :livereload
   activate :external_pipeline,
     name: :gulp,
     command: 'npm start',
@@ -101,15 +107,24 @@ end
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 configure :build do
+  activate :sitemap, :hostname => "https://sponsaurus.com"
+  activate :robots, 
+  rules: [
+    { user_agent: '*', allow: %w[/] }
+  ],
+  sitemap: 'https://sponsaurus.com/sitemap.xml'
+  
+  # Build TailwindCSS
   activate :external_pipeline,
-    name: :gulp,
-    command: 'npm run build',
-    source: '.tmp',
-    latency: 1
-
+            name: :gulp,
+            command: 'npm run build',
+            source: '.tmp',
+            latency: 1
+  
   ignore 'stylesheets/components/*.css'
+
+  # minify just html and js (css causes issues)
+  activate :minify_html
+  # activate :minify_css
+  activate :minify_javascript
 end
-
-
-# development 
-activate :livereload
