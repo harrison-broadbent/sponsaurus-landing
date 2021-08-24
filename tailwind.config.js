@@ -1,6 +1,6 @@
 const colors = require("tailwindcss/colors");
 module.exports = {
-  mode: "jit",
+  // mode: "jit",
   purge: [
     "./source/*.html.erb",
     "./source/*.html",
