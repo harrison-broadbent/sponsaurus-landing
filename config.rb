@@ -1,11 +1,22 @@
 # Blog
 activate :blog do |blog|
+  blog.name = "blog"
   blog.prefix = "blog"
   blog.permalink = "{title}.html"
   blog.sources = "{title}.html"
   blog.layout = "blog_layout"
   blog.new_article_template = File.expand_path("./source/partials/blog/_post_template.erb")
   blog.summary_length = 100
+end
+
+activate :blog do |changelog|
+  changelog.name = "changelog"
+  changelog.prefix = "changelog"
+  changelog.permalink = "{title}.html"
+  changelog.sources = "{title}.html"
+  # changelog.layout = "changelog_layout"
+  changelog.new_article_template = File.expand_path("./source/partials/blog/_post_template.erb")
+  changelog.summary_length = 100
 end
 
 # Per-page layout changes
@@ -75,11 +86,11 @@ helpers do
     <meta property='og:image' content='#{current_page.data.thumbnail || '/images/logo_square.png'}'>
 
     <!-- Twitter -->
-    <meta property='twitter:card' content='summary_large_image'>
+    <meta property='twitter:card' content='summary'>
     <meta property='twitter:url' content='#{current_page.url}'>
     <meta property='twitter:title' content='#{current_page.data.title || data.site.title}'>
     <meta property='twitter:description' content='#{current_page.data.description || data.site.description}'>
-    <meta property='twitter:image' content='#{current_page.data.thumbnail || '/images/logo_square.png'}'>
+    <meta property='twitter:image' content='/images/logo_square.png'>
 
     "
   end
