@@ -1,26 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title>Sponsaurus <%= " | " + current_page.data.title %></title>
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <%# <script src="https://unpkg.com/vue@next"></script> %>
-    <script src="https://unpkg.com/vue@3.2.2/dist/vue.global.prod.js"></script>
-    <%= favicon_tag 'favicon.ico' %>
-    <%= stylesheet_link_tag "site" %>
-
-    <%# only include tag in production %>
-    <% if app.build? %>
-      <%= partial 'partials/tracking_snippet' %>
-    <% end %>
-
-
+    <%= partial 'partials/_header_tags.erb' %>
   </head>
   <body>
     <%= partial 'partials/_header.html.erb' %>
