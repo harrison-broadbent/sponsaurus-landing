@@ -13,7 +13,7 @@
         <div class="mt-6 sm:mt-20">
           <div>
             <a
-              href="<%= blog.articles.first.url %>"
+              href="<%= blog('blog').articles.first.url %>"
               class="inline-flex space-x-4"
             >
               <span
@@ -41,7 +41,7 @@
                   space-x-1
                 "
               >
-                <span><%= blog.articles.first.title %></span>
+                <span><%= blog('blog').articles.first.title %></span>
                 <!-- Heroicon name: solid/chevron-right -->
                 <svg
                   class="h-5 w-5"
