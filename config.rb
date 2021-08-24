@@ -75,11 +75,11 @@ helpers do
     <meta property='og:image' content='#{current_page.data.thumbnail || '/images/logo_square.png'}'>
 
     <!-- Twitter -->
-    <meta property='twitter:card' content='summary_large_image'>
+    <meta property='twitter:card' content='summary'>
     <meta property='twitter:url' content='#{current_page.url}'>
     <meta property='twitter:title' content='#{current_page.data.title || data.site.title}'>
     <meta property='twitter:description' content='#{current_page.data.description || data.site.description}'>
-    <meta property='twitter:image' content='#{current_page.data.thumbnail || '/images/logo_square.png'}'>
+    <meta property='twitter:image' content='/images/logo_square.png'>
 
     "
   end
