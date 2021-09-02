@@ -1,7 +1,8 @@
 ---
 # Hero
-heroText: "Ad booking system for newsletter creators"
-heroCaptionText: "Sponsaurus helps you easily manage ad space in your newsletters - manage availability, collect data & receive payments, all with one simple tool."
+showWhatsNew: false
+heroText: "Ad management for newsletter creators"
+heroCaptionText: "End-to-end advertising management system -> publish availability, collect details & get paid, all in one."
 heroButtonText: "Join the beta!"
 
 # Demo
@@ -9,16 +10,16 @@ demoText: "Give it a spin."
 demoCaptionText: "Embed natively into websites, Notion boards and more."
 
 # Features
-featuresText: "A better way to manage your advertising space."
-featuresCaptionText: "Sponsaurus makes it easy to manage the availability, collect information, and receive payment, for the ad space in your newsletter."
-feature1Name: "Native embed widget"
-feature1Description: "Easily embed your Sponsaurus page into your website or a Notion board, using the native embeddable widget. Check out the example above 👆."
+featuresText: "10x better than a Google Sheet."
+featuresCaptionText: "Ditch the janky Google Sheet - Sponsaurus makes it easy to manage availability, collect information, and receive payments for your ad space."
+feature1Name: "Native widget"
+feature1Description: "Embed your Sponsaurus page into a website or Notion board, using the native widget. Your sponsors won't even have to leave your site. Live example above 👆."
 feature2Name: "Simple payment solution"
-feature2Description: "Quickly generate payment links without leaving the app, send them to your sponsor, and get the money as soon as they pay. (coming soon)"
-feature3Name: "Email Templates"
-feature3Description: "Sponsaurus pre-populates emails with a customizable message from you, saving you from the back-and-forth, and making sure you get the information you need."
+feature2Description: "Quickly generate payment links directly from the app, send them to your sponsor, and get the money as soon as they pay."
+feature3Name: "Custom Forms"
+feature3Description: "Create custom forms and email templates for your advertising slots. Make sure you get the information you need from your sponsors, first time around."
 feature4Name: "Smart slot management"
-feature4Description: "Sponsaurus will automatically hide advertising slots that do not get filled in time, so you don't have to worry about managing availability."
+feature4Description: "Sponsaurus automatically hides advertising spots that go unfilled, so you don't have to worry about managing their availability."
 
 # Email form
 emailText: "Let's keep in touch."
