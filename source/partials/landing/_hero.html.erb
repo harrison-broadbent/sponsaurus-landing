@@ -1,5 +1,5 @@
 <div class="bg-white pb-8 sm:pb-12 lg:pb-12">
-  <div class="pt-2 overflow-hidden sm:pt-12 lg:relative lg:py-48">
+  <div class="pt-2 overflow-hidden sm:pt-12 lg:relative lg:pb-48">
     <div
       class="
         mx-auto
@@ -11,6 +11,7 @@
     >
       <div>
         <div class="mt-6 sm:mt-20">
+          <% if data.landing.showWhatsNew %>
           <div>
             <a
               href="<%= blog('blog').articles.first.url %>"
@@ -59,6 +60,7 @@
               </span>
             </a>
           </div>
+          <% end %>
           <div class="mt-6 sm:max-w-xl">
             <h1
               class="
@@ -199,6 +201,8 @@
         >
           <img
             class="
+              hidden
+              md:block
               w-full
               ring-0
               p-4

@@ -73,28 +73,6 @@ helpers do
 
   end
 
-  def generate_meta_tags(current_page)
-    return "
-    <meta name='title' content='Sponsaurus | #{current_page.data.title || data.site.title}'>
-    <meta name='description' content='#{current_page.data.description || data.site.description}'>
-
-    <!-- Open Graph / Facebook -->
-    <meta property='og:type' content='website'>
-    <meta property='og:url' content='#{current_page.url}'>
-    <meta property='og:title' content='#{current_page.data.title || data.site.title}'>
-    <meta property='og:description' content='#{current_page.data.description || data.site.description}'>
-    <meta property='og:image' content='#{current_page.data.thumbnail || '/images/logo_square.png'}'>
-
-    <!-- Twitter -->
-    <meta property='twitter:card' content='summary'>
-    <meta property='twitter:url' content='#{current_page.url}'>
-    <meta property='twitter:title' content='#{current_page.data.title || data.site.title}'>
-    <meta property='twitter:description' content='#{current_page.data.description || data.site.description}'>
-    <meta property='twitter:image' content='/images/logo_square.png'>
-
-    "
-  end
-
 end
 
 # Standard plugins
